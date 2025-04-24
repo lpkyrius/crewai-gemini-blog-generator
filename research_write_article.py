@@ -107,6 +107,6 @@ crew = Crew(
 )
 
 if __name__ == "__main__":
-    topic = "Artificial Intelligence"  # Change as needed
+    topic = "Artificial Intelligence"  # Change the topic as needed
     result = crew.kickoff(inputs={"topic": topic})
     print(result)
