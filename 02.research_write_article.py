@@ -8,19 +8,19 @@ warnings.filterwarnings('ignore')
 
 # Load environment variables
 load_dotenv()
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+# GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
-# Set up Gemini LLM
-llm = ChatGoogleGenerativeAI(
-    model="gemini-1.5-flash",  # or "gemini-pro"
-    verbose=True,
-    temperature=0.5,
-    google_api_key=GOOGLE_API_KEY
-)
+# # Set up Gemini LLM
+# llm = ChatGoogleGenerativeAI(
+#     model="gemini-1.5-flash",  # or "gemini-pro"
+#     verbose=True,
+#     temperature=0.5,
+#     google_api_key=GOOGLE_API_KEY
+# )
 
 # For Open AI API you can use:
-# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-# os.environ["OPENAI_MODEL_NAME"] = 'gpt-3.5-turbo'
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+os.environ["OPENAI_MODEL_NAME"] = 'gpt-3.5-turbo'
 
 # Define agents with Gemini LLM
 planner = Agent(
@@ -33,7 +33,7 @@ planner = Agent(
     ),
     allow_delegation=False,
     verbose=True,
-    llm=llm
+    # llm=llm
 )
 
 writer = Agent(
@@ -46,7 +46,7 @@ writer = Agent(
     ),
     allow_delegation=False,
     verbose=True,
-    llm=llm
+    # llm=llm
 )
 
 editor = Agent(
@@ -58,7 +58,7 @@ editor = Agent(
     ),
     allow_delegation=False,
     verbose=True,
-    llm=llm
+    # llm=llm
 )
 
 # Define tasks
@@ -103,7 +103,7 @@ edit = Task(
 crew = Crew(
     agents=[planner, writer, editor],
     tasks=[plan, write, edit],
-    verbose=2
+    verbose=True
 )
 
 if __name__ == "__main__":
