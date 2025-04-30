@@ -1,93 +1,16 @@
-# CrewAI Blog Generator with Google Gemini
+# CrewAI Multiagent Business Workflows
 
-This project demonstrates how to use [CrewAI](https://github.com/crewAIInc/crewAI) with [Google Gemini](https://ai.google.dev/) as the language model to automatically plan, write, and edit high-quality blog posts on any topic. The workflow is modular, with distinct agents for content planning, writing, and editing—each powered by Google Gemini’s state-of-the-art generative AI.
-
----
-
-## Features
-
-- **Multi-Agent Workflow:** Planner, Writer, and Editor agents collaborate to produce professional blog content.
-- **Google Gemini Integration:** Uses Gemini’s free API (within quota) for all text generation.
-- **Modular Tasks:** Each agent is assigned a clear, realistic role and task.
-- **Markdown Output:** Final blog post is ready for publication.
+A collection of advanced, real-world multi-agent [CrewAI](https://github.com/crewAIInc/crewAI) workflows for business automation-featuring customer support, event planning, financial analysis, and sales/outreach, all powered by OpenAI and integrated with web search and scraping tools.
 
 ---
 
-## Getting Started
+## 🚀 What’s Inside
 
-### 1. Clone the Repository
-
-git clone https://github.com/your-username/crewai-gemini-blog-generator.gitcd crewai-gemini-blog-generator
-
-
-### 2. Install Dependencies
-
-Make sure you have Python 3.9+ installed.
-
-```
-pip install -r requirements.txt
-```
-
-
-If you don’t have a `requirements.txt`, use:
-
-```
-pip install crewai crewai_tools langchain-google-genai python-dotenv
-```
-
-
-### 3. Set Up Your Google Gemini API Key
-
-1. Get your API key from [Google AI Studio](https://aistudio.google.com/).
-2. Create a `.env` file in the project root:
-
-    ```
-    GOOGLE_API_KEY=your-gemini-api-key-here
-    ```
-
-### 4. Run the Project
-
-Edit `main.py` to set your desired topic, then run:
-
-```
-python main.py
-```
-
-
-The generated blog post will be printed in your terminal.
-
----
-
-## Project Structure
-
-```
-.
-├── main.py
-├── .env
-├── requirements.txt
-└── README.md
-```
-
----
-
-## Example Output
-
-Artificial Intelligence
-Introduction
-Artificial Intelligence (AI) is transforming industries…
-Latest Trends and Key Players
-…
-Conclusion
-…
-
-
----
-
-## Customization
-
-- **Change the topic:** Edit the `topic` variable in `main.py`.
-- **Adjust agent prompts:** Modify agent definitions in `main.py` for different writing styles or workflows.
-- **Switch Gemini models:** Change the `model` parameter in the LLM setup (e.g., `"gemini-1.5-flash"` or `"gemini-pro"`).
+- **Customer Support Automation:** Multi-agent support and QA with web tools.
+- **Customer Outreach Campaigns:** Lead profiling, personalized outreach, and sentiment analysis.
+- **Event Planning Automation:** Venue coordination, logistics, and marketing agents.
+- **Financial Analysis Collaboration:** Data analysis, strategy, execution, and risk assessment agents.
+- **Modular, extensible code:** Each workflow is a standalone Python script, ready for customization.
 
 ---
 
